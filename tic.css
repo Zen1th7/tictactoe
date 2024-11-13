@@ -1,0 +1,202 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#main {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Header */
+h1 {
+    color: #2563eb;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Score Board */
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.player-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-score span:first-child {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.player-score span:last-child {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#score-x {
+    color: #2563eb;
+}
+
+#score-o {
+    color: #dc2626;
+}
+
+.trophy {
+    font-size: 1.5rem;
+}
+
+/* Game Status */
+#status {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+/* Game Board */
+.game-board {
+    display: inline-block;
+    background: #e5e7eb;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.row:last-child {
+    margin-bottom: 0;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    border: none;
+    background: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cell:hover:not(:disabled) {
+    background: #f8fafc;
+}
+
+.cell:disabled {
+    cursor: not-allowed;
+}
+
+.cell.x {
+    color: #2563eb;
+}
+
+.cell.o {
+    color: #dc2626;
+}
+
+.cell.winner {
+    background: #86efac;
+}
+
+/* Control Buttons */
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#new-game {
+    background: #e5e7eb;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#new-game:hover {
+    background: #d1d5db;
+}
+
+#reset-scores {
+    background: #dc2626;
+    color: white;
+}
+
+#reset-scores:hover {
+    background: #b91c1c;
+}
+
+/* Game History */
+.history {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.history h3 {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+#history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 0.25rem;
+}
+
+.winner-x {
+    color: #2563eb;
+}
+
+.winner-o {
+    color: #dc2626;
+}
+
+.winner-tie {
+    color: #666;
+}
